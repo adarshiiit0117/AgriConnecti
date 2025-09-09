@@ -61,55 +61,6 @@ const Testimonials = () => {
     }
   ];
 
-  // Our development team data
-  const teamData = [
-    {
-      name: "Gaurav Kumar",
-      title: "Frontend Developer",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
-      rating: 5,
-      role: "Lead Developer",
-      experience: "3+ Years",
-      icon: "🎨"
-    },
-    {
-      name: "Adarsh Dubey",
-      title: "Backend Developer",
-      image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=300&h=300&fit=crop&crop=face",
-      rating: 5,
-      role: "Backend Architect",
-      experience: "4+ Years",
-      icon: "⚙️"
-    },
-    {
-      name: "Ansh Singh",
-      title: "AI/ML Specialist",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop&crop=face",
-      rating: 5,
-      role: "AI Engineer",
-      experience: "2+ Years",
-      icon: "🤖"
-    },
-    {
-      name: "Grees Kumar", 
-      title: "ML Engineer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-      rating: 4,
-      role: "ML Engineer",
-      experience: "2+ Years",
-      icon: "💧"
-    },
-    {
-      name: "Kshit Joshi",
-      title: "QA Specialist",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      rating: 5,
-      role: "QA Lead",
-      experience: "3+ Years",
-      icon: "🔍"
-    }
-  ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -130,195 +81,143 @@ const Testimonials = () => {
       </span>
     ));
   };
-    const navigate = useNavigate();
+  
+  const navigate = useNavigate();
 
   return (
-   
-      
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-green-400/30">
-            <span>🌾</span>
-            <span className="text-white/90 font-medium">Meet Our Team</span>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
-            Team 
-            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              Testimonials
-            </span>
-          </h1>
-          
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            The passionate innovators behind AgriConnect's success
-          </p>
+    <div className="relative z-10 max-w-7xl mx-auto px-4">
+      {/* Header */}
+      <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-green-400/30">
+          <span>🌾</span>
+          <span className="text-white/90 font-medium">Customer Stories</span>
         </div>
+        
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+          Customer 
+          <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+            Testimonials
+          </span>
+        </h1>
+        
+        <p className="text-xl text-white/70 max-w-2xl mx-auto">
+          Hear from farmers who transformed their operations with AgriConnect
+        </p>
+      </div>
 
-        {/* Stats */}
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          {[
-            { icon: '👥', number: '5+', label: 'Developers' },
-            { icon: '⭐', number: '4.8', label: 'Team Rating' },
-            { icon: '🏆', number: '100%', label: 'Satisfaction' }
-          ].map((stat, index) => (
-            <div key={index} className="group">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 text-center border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
-                <div className="text-3xl mb-4 group-hover:animate-bounce">{stat.icon}</div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-white/70">{stat.label}</div>
+      {/* Stats */}
+      <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        {[
+          { icon: '🌾', number: '1000+', label: 'Happy Farmers' },
+          { icon: '⭐', number: '4.9', label: 'Average Rating' },
+          { icon: '📈', number: '35%', label: 'Yield Increase' }
+        ].map((stat, index) => (
+          <div key={index} className="group">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 text-center border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
+              <div className="text-3xl mb-4 group-hover:animate-bounce">{stat.icon}</div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-white/70">{stat.label}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Featured Testimonial */}
+      <div className={`mb-20 transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-12 border border-white/20 relative overflow-hidden">
+          <div className="absolute top-6 left-6 text-4xl text-green-400/30">"</div>
+          
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="relative">
+              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-green-400/50 shadow-xl">
+                <img
+                  src={testimonialsData[currentSlide].image}
+                  alt={testimonialsData[currentSlide].name}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full w-10 h-10 flex items-center justify-center text-xl animate-pulse">
+                {testimonialsData[currentSlide].icon}
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* Featured Testimonial */}
-        <div className={`mb-20 transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-12 border border-white/20 relative overflow-hidden">
-            <div className="absolute top-6 left-6 text-4xl text-green-400/30">"</div>
-            
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="relative">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-green-400/50 shadow-xl">
-                  <img
-                    src={testimonialsData[currentSlide].image}
-                    alt={testimonialsData[currentSlide].name}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full w-10 h-10 flex items-center justify-center text-xl animate-pulse">
-                  {testimonialsData[currentSlide].icon}
-                </div>
+            <div className="flex-1 text-center lg:text-left">
+              <div className="flex justify-center lg:justify-start mb-4">
+                {renderStars(testimonialsData[currentSlide].rating)}
               </div>
-
-              <div className="flex-1 text-center lg:text-left">
-                <div className="flex justify-center lg:justify-start mb-4">
-                  {renderStars(testimonialsData[currentSlide].rating)}
-                </div>
-                
-                <p className="text-2xl text-white/90 mb-6 italic">
-                  "{testimonialsData[currentSlide].text}"
+              
+              <p className="text-2xl text-white/90 mb-6 italic">
+                "{testimonialsData[currentSlide].text}"
+              </p>
+              
+              <div className="mb-4">
+                <h3 className="text-2xl font-bold text-white mb-1">
+                  {testimonialsData[currentSlide].name}
+                </h3>
+                <p className="text-green-400 font-medium mb-2">
+                  {testimonialsData[currentSlide].title}
                 </p>
-                
-                <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-white mb-1">
-                    {testimonialsData[currentSlide].name}
-                  </h3>
-                  <p className="text-green-400 font-medium mb-2">
-                    {testimonialsData[currentSlide].title}
-                  </p>
-                  <div className="flex justify-center lg:justify-start gap-4 text-sm text-white/70">
-                    <span>{testimonialsData[currentSlide].role}</span>
-                    <span>•</span>
-                    <span>{testimonialsData[currentSlide].experience}</span>
-                  </div>
+                <div className="flex justify-center lg:justify-start gap-4 text-sm text-white/70">
+                  <span>{testimonialsData[currentSlide].role}</span>
+                  <span>•</span>
+                  <span>{testimonialsData[currentSlide].experience}</span>
                 </div>
               </div>
             </div>
-
-            {/* Navigation */}
-            <div className="flex justify-center items-center gap-4 mt-8">
-              <button
-                onClick={() => setCurrentSlide((prev) => (prev - 1 + testimonialsData.length) % testimonialsData.length)}
-                className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300 group"
-              >
-                <span className="text-white group-hover:scale-110 inline-block transition-transform duration-300">←</span>
-              </button>
-
-              <div className="flex gap-2">
-                {testimonialsData.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      index === currentSlide ? 'bg-green-400 w-8' : 'bg-white/40 w-2'
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={() => setCurrentSlide((prev) => (prev + 1) % testimonialsData.length)}
-                className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300 group"
-              >
-                <span className="text-white group-hover:scale-110 inline-block transition-transform duration-300">→</span>
-              </button>
-            </div>
           </div>
-        </div>
 
-        {/* Team Grid */}
-        <div className={`mb-20 transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our Development Team
-          </h2>
+          {/* Navigation */}
+          <div className="flex justify-center items-center gap-4 mt-8">
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev - 1 + testimonialsData.length) % testimonialsData.length)}
+              className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300 group"
+            >
+              <span className="text-white group-hover:scale-110 inline-block transition-transform duration-300">←</span>
+            </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {teamData.map((member, index) => (
-              <div
-                key={index}
-                className={`group cursor-pointer transform transition-all duration-500 hover:scale-105 ${
-                  index === currentSlide ? 'scale-105' : ''
-                }`}
-                onClick={() => setCurrentSlide(index)}
-              >
-                <div className={`bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border transition-all duration-300 ${
-                  index === currentSlide ? 'border-green-400 bg-white/20' : 'border-white/20 hover:border-white/40'
-                }`}>
-                  <div className="relative mb-4">
-                    <div className="w-20 h-20 rounded-full overflow-hidden mx-auto border-2 border-white/30 group-hover:border-green-400/50 transition-all duration-300">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-
-                  </div>
-
-                  <h3 className="font-bold text-white mb-1 group-hover:text-green-400 transition-colors duration-300">
-                    {member.name}
-                  </h3>
-                  <p className="text-green-400 text-sm font-medium mb-3">
-                    {member.title}
-                  </p>
-
-                  <div className="flex justify-center mb-3">
-                    {renderStars(member.rating)}
-                  </div>
-
-                  <div className="text-xs bg-white/10 rounded-full px-3 py-1 text-white/80 inline-block">
-                    {member.experience}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className={`text-center transform transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-md rounded-3xl p-12 border border-white/20">
-            <div className="text-4xl mb-4 animate-bounce">🌾</div>
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Join Our Agricultural Revolution!
-            </h3>
-            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Ready to transform your farming experience with cutting-edge technology?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button onClick={()=>navigate("/login")} className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
-                Get Started Now
-              </button>
-              <button className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105">
-                Learn More
-              </button>
+            <div className="flex gap-2">
+              {testimonialsData.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-green-400 w-8' : 'bg-white/40 w-2'
+                  }`}
+                />
+              ))}
             </div>
+
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev + 1) % testimonialsData.length)}
+              className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300 group"
+            >
+              <span className="text-white group-hover:scale-110 inline-block transition-transform duration-300">→</span>
+            </button>
           </div>
         </div>
       </div>
-    
+
+      {/* Call to Action */}
+      <div className={`text-center transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-md rounded-3xl p-12 border border-white/20">
+          <div className="text-4xl mb-4 animate-bounce">🌾</div>
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Join Our Agricultural Revolution!
+          </h3>
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+            Ready to transform your farming experience with cutting-edge technology?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onClick={()=>navigate("/login")} className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
+              Get Started Now
+            </button>
+            <button className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
